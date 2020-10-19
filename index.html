@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>nmsl
+<body>nmhl
 <div id="c"></div>
 </body>
 </html>
@@ -12,7 +12,7 @@
 <script>
 
     function fetchResult(){
-        fetch("http://cloud.bmob.cn/85ffd0f30124b851/getId").then(function(resp){
+        fetch("https://cloud.bmob.cn/85ffd0f30124b851/getId").then(function(resp){
             resp.text().then(data => {
                 if (data.hasError === true) {
                     tracker.log('API Error');
