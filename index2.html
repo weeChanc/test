@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>nmhl
+<div id="c"></div>
+</body>
+</html>
+
+<script>
+
+    function fetchResult(){
+        fetch("https://cloud.bmob.cn/85ffd0f30124b851/getId").then(function(resp){
+            resp.text().then(data => {
+                if (data.hasError === true) {
+                    tracker.log('API Error');
+                }
+                document.getElementById("c").innerText = data
+                console.log(data)
+            });
+        })
+    }
+
+    window.onload = function(){
+        fetchResult()
+    }
+</script>
